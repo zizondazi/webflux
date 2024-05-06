@@ -17,7 +17,7 @@ public class PostService {
 
     public Mono<PostResponse> getPost(Long id) {
         return postClient.getPost(id)
-                .onErrorResume(error -> Mono.just(new PostResponse(id.toString(),  "Callback data %d".formatted(id.toString())));
+                .onErrorResume(error -> Mono.just(new PostResponse(id.toString(),  "Callback data %d".formatted(id.toString()))));
     }
 
     public Flux<PostResponse> getMultiplePostContent(List<Long> ids) {
