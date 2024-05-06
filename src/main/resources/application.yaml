@@ -1,6 +1,7 @@
 logging:
   level:
     root: INFO
+    org.springframework.r2dbc.core: debug
 
 
 spring:
@@ -8,4 +9,5 @@ spring:
     url: r2dbc:mysql://localhost:3305/fastsns
     username: root
     password: qwer1234
+
 

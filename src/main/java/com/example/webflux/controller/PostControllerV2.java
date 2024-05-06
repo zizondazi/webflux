@@ -34,7 +34,7 @@ public class PostControllerV2 {
                 .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
     }
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     public Mono<ResponseEntity<?>> deletePost(@PathVariable Long id) {
         return postServiceV2.deleteById(id)
                 .then(Mono.just(ResponseEntity.noContent().build()));
