@@ -94,7 +94,7 @@ class UserControllerTest {
 
     @Test
     void deleteUserById() {
-        Mockito.when(userService.deleteById(1L)).thenReturn(Mono.just(1));
+        Mockito.when(userService.deleteById(1L)).thenReturn(Mono.empty());
 
         client.delete().uri("/users/1")
                 .exchange()

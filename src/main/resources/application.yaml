@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: INFO
+
+
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3305/fastsns
+    username: root
+    password: qwer1234
+
